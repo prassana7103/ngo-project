@@ -67,8 +67,8 @@ document.getElementById("send").addEventListener("click", function() {
           document.getElementById("progress").value = percentage;
         },
 
-        function error() {
-          alert("error uploading file");
+        function error(err) {
+          alert(err);
         },
 
         function complete() {
