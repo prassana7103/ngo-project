@@ -22,13 +22,14 @@
 			};
   			firebase.initializeApp(config);
 			
-			let storageRef = firebase.storage().ref('Records')
-			let fileUpload = document.getElementById("cameraInput")
+			let storageRef = firebase.storage().ref('Records');
+			let fileUpload = document.getElementById("cameraInput");
 			
 			fileUpload.addEventListener('change', function(evt) {
-			    let firstFile = evt.target.files[0] // upload the first file only
-			    let uploadTask = storageRef.put(firstFile)
-			})
+			    let firstFile = evt.target.files[0]; // upload the first file only
+			    console.log(evt.target.files[0]);
+			    let uploadTask = storageRef.put(firstFile);
+			});
 		</script>
 	</body>
 </html>
