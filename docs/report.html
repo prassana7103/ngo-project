@@ -5,5 +5,30 @@
 	
 	<body>
 		<input type="file" accept="image/*" capture="camera" id="cameraInput" />
+		
+		
+		<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+		
+		<script>
+			var config = {
+			  apiKey: "AIzaSyAgrznv9KJLpL9i5d3kA0UMZm0stZmjMtE",
+			  authDomain: "ngo-project-e1934.firebaseapp.com",
+			  databaseURL: "https://ngo-project-e1934-default-rtdb.firebaseio.com",
+			  projectId: "ngo-project-e1934",
+			  storageBucket: "ngo-project-e1934.appspot.com",
+			  messagingSenderId: "628000468451",
+			  appId: "1:628000468451:web:7ea9ff52fbd03a4242c4d6",
+			  measurementId: "G-RCYVV11MND"
+			};
+  			firebase.initializeApp(config);
+			
+			let storageRef = firebase.storage().ref('Records')
+			let fileUpload = document.getElementById("cameraInput")
+			
+			fileUpload.addEventListener('change', function(evt) {
+			    let firstFile = evt.target.files[0] // upload the first file only
+			    let uploadTask = storageRef.put(firstFile)
+			})
+		</script>
 	</body>
 </html>
