@@ -68,7 +68,8 @@ document.getElementById("send").addEventListener("click", function() {
         },
 
         function error(err) {
-          alert(err);
+		console.log(err);
+          alert("Error Occured while Uploading");
         },
 
         function complete() {
