@@ -39,6 +39,7 @@
       </div>
       <!-- end loader -->
       <!-- header -->
+      <div class="back_img">
       <header>
          <!-- header inner -->
          <div class="header">
@@ -73,7 +74,7 @@
                                  <a class="nav-link" href="#contact">Contact</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="report.html">Report</a>
+                                 <a class="nav-link" href="report.html">NGO Login</a>
                               </li>
                            </ul>
                         </div>
@@ -94,17 +95,13 @@
                      <h1>Care They Need,<br>Love They Deserve</h1>
                      <span>We Are Looking For Our Heroes!</span>
                      <p>Contact us if you an veterinarian or a NGO handler and would like to work with all of the NGOs through out the India </p>
-                     <a href="#">Get Started</a>
                   </div>
                </div>
-               <div class="col-md-7">
-                  <div class="text-img">
-                     <figure><img src="images/img.png" /></figure>
-                  </div>
                </div>
             </div>
          </div>
       </section>
+   </div>
       <!-- end banner -->
       <!-- Hosting -->
       <div id="" class="hosting">
@@ -119,9 +116,9 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="web_hosting">
-                     <figure><img  src="images/web.jpg" alt="#"/></figure>
+                     <input type="file" id="fileButton" value="upload"/>
+                     <a href="#">Upload</a>
                      <p>Do you fill sorry for the stray dogs and cats? when they roam here and there in search of food and shelter? Surely you guys must be feeling to come to the aid of this cute animals hen you are at the right place because this site will surely help you to contribute for this strays. Steps are very easy to follow up, firstly if you notice any stray dog or a cat wandering around in your locality or if any random location the only thing you guys need to do is to take a photo of that animal , description about the current condition of that stray with the exact location. Now here comes the main process in which we collect all that information from you helpers and forward it to all the NGO's who are registered to our site. First to response to the uploaded data will take responsibility of that dog/cat.</p>
-                     <a href="#">Read more</a>
                   </div>
                </div>
             </div>
@@ -143,23 +140,23 @@
             <div class="row">
                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                   <div class="Services-box">
-                     <i><img src="images/service1.png" alt="#" /></i>
+                     <i><img src="images/service1.jpg" alt="#" /></i>
                      <h3>Adopt a Dog </h3>
                      <p>We have all the registered NGOs information you can contact them for adoption.</p>
                   </div>
                </div>
                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                   <div class="Services-box">
-                     <i><img src="images/service2.png" alt="#" /></i>
+                     <i><img src="images/service2.jpg" alt="#" /></i>
                      <h3>Donation for NGOs</h3>
-                     <p>According to your wish you can donate to any registered NGOs on ou site by contacting them.</p>
+                     <p>According to your wish you can donate to any registered NGOs on ou site by contacting us.</p>
                   </div>
                </div>
                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                   <div class="Services-box">
-                     <i><img src="images/service3.png" alt="#" /></i>
+                     <i><img src="images/service3.jpg" alt="#" /></i>
                      <h3>Volunter for NGOs</h3>
-                     <p>NGOs welcome volunteers from around the Nation. They appreciate your interest in supporting the animals they serve..</p>
+                     <p>NGOs welcome volunteers from around the Nation and appreciate their interest serving the animals.</p>
                   </div>
                </div>
             </div>
@@ -172,7 +169,7 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <h2>Why you should choose </h2>
+                     <h2>Why you should choose us?</h2>
                      
                   </div>
                </div>
@@ -184,7 +181,7 @@
                      <h3>Saftey</h3>
                      <p>The data you provide will be end-to-end encrypted so no worries</p>
                   </div>
-                  <a class="read_more bg" href="#">Read More</a>
+                  <!-- <a class="read_more bg" href="#">Read More</a> -->
                </div>
                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                   <div class="why-box">
@@ -192,7 +189,7 @@
                      <h3>User Friendly</h3>
                      <p>The user interface is very simple and easy to use i.e any one can operate it</p>
                   </div>
-                  <a class="read_more bg" href="#">Read More</a>
+                  <!-- <a class="read_more bg" href="#">Read More</a> -->
                </div>
                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                   <div class="why-box">
@@ -200,7 +197,7 @@
                      <h3>National Support</h3>
                      <p>Majority of the NGOs throughout the nation are registered with us </p>
                   </div>
-                  <a class="read_more bg" href="#">Read More</a>
+                  <!-- <a class="read_more bg" href="#">Read More</a> -->
                </div>
             </div>
          </div>
@@ -211,7 +208,7 @@
          <div class="container">
             <div class="row">
                <div class="col-md-6 offset-md-3 ">
-                  <form class="main_form">
+                  <form class="main_form" id="feedback" action="https://formspree.io/f/moqyjdwl" method="post">
                      <div class="row">
                         <div class="col-sm-12">
                            <input class="contactus" placeholder="Name" type="text" name="Name">
@@ -225,11 +222,9 @@
                         <div class="col-sm-12">
                            <textarea class="textarea" placeholder="Message" type="text" name="Message"></textarea>
                         </div>
-                        <div class="col-sm-12">
-                           <button class="send">Send</button>
-                        </div>
                      </div>
                   </form>
+                  <input type="submit" form="feedback">
                </div>
             </div>
          </div>

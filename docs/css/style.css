@@ -296,9 +296,18 @@ button {
 /*--------------------------------------------------------------------- layout new css ---------------------------------------------------------------------*/
 
 .header {
-     background: #0c0f38;
-     width: 100%;
+     /*background: #0c0f38;*/
+     /*background-image: url("../back1.jpg");
+     background-repeat: no-repeat;
+     background-size:cover;*/
+     /*width: 100%;*/
      padding: 40px 40px 40px 40px;
+}
+
+.back_img{
+     background-image: url("../back1.jpg");
+     background-repeat: no-repeat;
+     background-size:cover;
 }
 
 .logo a {
@@ -309,10 +318,12 @@ button {
      line-height: 40px;
 }
 
-.banner_main {
+.banner_main {/*
      background: #0c0f38;
-     background-size: 100% 100%;
-     background-repeat: no-repeat;
+     background-size: 100% 100%;*//*
+     background-image: url("../back1.jpg");
+     background-size:cover;
+     background-repeat: no-repeat;*/
      padding-bottom: 90px;
 }
 
@@ -447,9 +458,9 @@ button {
      background: #fff;
      width: 100px;
      height: 100px;
-     border-radius: 50px;
+     /*border-radius: 50px;*/
      display: inline-block;
-     padding-top: 19px;
+     /*padding-top: 19px;*/
 }
 
 .Services .Services-box i:hover {
