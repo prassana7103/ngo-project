@@ -597,6 +597,7 @@ button {
 /** contact section **/
 
 .contact {
+     display: block;
      padding-top: 90px;
      font-family: Poppins;
 }
@@ -638,7 +639,7 @@ button {
      color: #ef4259;
      padding: 12px 70px;
      margin: 0 auto;
-     display: block;
+     display: inline-block;
      border-radius: 30px;
 }
 
