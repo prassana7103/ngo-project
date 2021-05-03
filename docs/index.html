@@ -17,6 +17,7 @@
    <link rel="stylesheet" href="css/bootstrap.min.css">
    <!-- style css -->
    <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="wtf-forms.css">
    <!-- Responsive-->
    <link rel="stylesheet" href="css/responsive.css">
    <!-- fevicon -->
@@ -49,7 +50,7 @@
                      <div class="full">
                         <div class="center-desk">
                            <div class="logo">
-                              <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                              <a href="index.html"><img src="logo.png" alt="#" /></a>
                            </div>
                         </div>
                      </div>
@@ -60,9 +61,9 @@
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
                               <li class="nav-item active"> <a class="nav-link" href="#">Home</a> </li>
-                              <li class="nav-item"> <a class="nav-link" href="#"> About  </a> </li>
+                              <li class="nav-item"> <a class="nav-link" href="#about"> About  </a> </li>
                               <li class="nav-item"> <a class="nav-link" href="#service"> Service</a> </li>
-                              <li class="nav-item"> <a class="nav-link" href="#contact">Contact</a> </li>
+                              <li class="nav-item"> <a class="nav-link" href="#cont">Contact</a> </li>
                               <li class="nav-item"> <a class="nav-link" href="report.html">NGO Login</a> </li>
                            </ul>
                         </div>
@@ -78,29 +79,31 @@
       <section class="banner_main">
          <div class="container">
             <div class="row d_flex">
-               <div class="col-md-5">
+               <div>
                   <div class="text-bg">
                      <h1>Care They Need,<br>Love They Deserve</h1> <span>We Are Looking For Our Heroes!</span>
-                     <p>Contact us if you an veterinarian or a NGO handler and would like to work with all of the NGOs through out the India </p>
                   </div>
                </div>
             </div>
          </div>
-   </div>
-   </section>
+      </section>
    </div>
    <!-- end banner -->
    <!-- Hosting -->
-   <div id="" class="hosting">
+   <div id="about" class="hosting">
       <div class="container">
          <div class="row">
             <div class="col-md-12">
                <div class="titlepage">
-                  <h2>How Can You Lend A Helping Hand For Our Furry Friends?</h2> </div>
+                  <h2>How Can You Lend A Helping Hand For Our Furry Friends?</h2> 
+               </div>
+               <p>Do you fill sorry for the stray dogs and cats when they roam here and there in search of food and shelter? Surely you guys must be feeling to come to the aid of this cute animals and you are at the right place because this site will surely help you to contribute for this strays. Steps are very easy to follow up, firstly if you notice any stray dog or a cat wandering around in your locality or if any random location the only thing you guys need to do is to take a photo of that animal, description about the current condition of that stray with the exact location. Now here comes the main process in which we collect all that information from you helpers and forward it to all the NGO's who are registered to our site. First to response to the uploaded data will take responsibility of that dog/cat.
+               </p>
             </div>
          </div>
       </div>
    </div>
+
    <div id="contact" class="contact">
       <div class="container">
          <div class="row">
@@ -110,8 +113,14 @@
                      <div class="col-sm-12">
                         <textarea class="textarea" placeholder="Description*" type="text" id="description"></textarea>
                      </div>
+                     
                      <div class="col-sm-12">
-                        <input type="file" id="fileButton" value="upload" accept="image/jpeg" /> </div>
+                        <label class="file">
+                           <input type="file" id="fileButton" value="upload" accept="image/jpeg" >
+                           <span class="file-custom"></span>
+                        </label>
+                     </div>
+                     
                      <div class="col-sm-12">
                         <button type="button" id="submit" class="send">Submit</button>
                      </div>
@@ -123,18 +132,6 @@
    </div>
    <!-- end Hosting -->
    <!-- Services  -->
-   <br />
-   <br />
-   <br />
-   <br />
-   <br />
-   <br />
-   <br />
-   <br />
-   <br />
-   <br />
-   <br />
-   <br />
    <div id="service" class="Services">
       <div class="container">
          <div class="row">
@@ -206,7 +203,7 @@
          <div class="container">
             <div class="row">
                <div class="col-md-10 offset-md-1">
-                  <div class="cont">
+                  <div class="cont" id="cont">
                      <h3>Contact now</h3> <span>"Dogs/Cats do speak, but only to those who know how to listen."</span> </div>
                </div>
             </div>
@@ -215,7 +212,7 @@
             <div class="container">
                <div class="row">
                   <div class="col-md-12">
-                     <p>© 2019 All Rights Reserved. <a href="https://html.design/">Free html Templates</a></p>
+                     <p>© 2019 All Rights Reserved. <a href="https://html.design/">Pet Paradise</a></p>
                   </div>
                </div>
             </div>
@@ -281,6 +278,7 @@
          alert('Please Select File before Submission');
          return ;
       }
+      document.getElementById("submit").disabled = true; 
 
       var storageRef = firebase.storage().ref('img/' + curr_record.toString());
       var task = storageRef.put(file);
@@ -302,10 +300,11 @@
             });
 
             firebase.database().ref('recordCount').set(curr_record+1);
-
          });
 
          alert("Uploaded Successfully!");
+
+         setTimeout(() => {location.reload();}, 2000);
       });
    });
    </script>
